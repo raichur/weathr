@@ -7,11 +7,11 @@ define([
 
   var getId = function () {
     return id;
-  }
+  };
 
   var initialize = function () {
-    $('body').append('<div id="' + id + '">Content</div>')
-  }
+    $('body').append('<div id="' + id + '"></div>')
+  };
 
   var displayTime = function () {
     var html = [
@@ -22,6 +22,11 @@ define([
       '</div>'
     ].join('');
     $('#' + id).html(html);
+  };
+
+  var getTimeString = function () {
+    var date = new Date();
+    return [date.getHours(), ':', date.getMinutes()].join('');
   };
 
   return {
