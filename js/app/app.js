@@ -13,6 +13,11 @@ define([
     $('body').append('<div id="' + id + '"></div>')
   };
 
+  var getTimeString = function () {
+    var date = new Date();
+    return [date.getHours(), ':', date.getMinutes()].join('');
+  };
+
   var displayTime = function () {
     var html = [
       '<div class="alert">',
@@ -22,11 +27,6 @@ define([
       '</div>'
     ].join('');
     $('#' + id).html(html);
-  };
-
-  var getTimeString = function () {
-    var date = new Date();
-    return [date.getHours(), ':', date.getMinutes()].join('');
   };
 
   return {
