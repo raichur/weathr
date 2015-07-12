@@ -3,9 +3,30 @@ define([
 ], function ($) {
   'use strict';
 
+  var id = 'content';
+
+  var getId = function () {
+    return id;
+  }
+
+  var initialize = function () {
+    $('body').append('<div id="' + id + '">Content</div>')
+  }
+
+  var displayTime = function () {
+    var html = [
+      '<div class="alert">',
+        '<button type="button" class="close" data-dismiss="alert">&times;</button>',
+        'The time is: ',
+        getTimeString(),
+      '</div>'
+    ].join('');
+    $('#' + id).html(html);
+  };
+
   return {
-    initialize: function () {
-      $('body').append('<div id="content">Content</div>')
-    }
+    initialize: initialize,
+    displayTime: displayTime,
+    getId: getId
   }
 });
