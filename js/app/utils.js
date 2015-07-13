@@ -4,8 +4,14 @@ define([
 
   'use strict';
 
-  var celsiusToFahrenheit = function (cel) {
+  var isNumber = function (n) {
+    return typeof n == 'number';
+  }
 
+  var celsiusToFahrenheit = function (cel) {
+    if (!isNumber(cel)) {
+      return null;
+    }
   };
 
   return {
