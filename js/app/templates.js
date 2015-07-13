@@ -18,9 +18,12 @@ define([
   ].join('');
 
   Templates['day'] = [
-    '<div>',
+    '<div class="forecast-day">',
+      '<h3><%= weekday %></h3>',
       '<img src="<%= icon_url %>" alt="">',
-      '<br/><%= conditions %>',
+      '<p class="forecast-fahr"><%= lowFahrenheit %>°F – <%= highFahrenheit %>°F</p>',
+      '<p class="forecast-cel"><%= lowCelsius %>°C – <%= highCelsius %>°C</p>',
+      '<div class="forecast-conditions"><%= conditions %></div>',
     '</div>'
   ].join('');
 
