@@ -20,3 +20,11 @@ body {
   color: white;
   text-decoration: none;
 }
+
+/* ==========================================================================
+   Forecast
+   ========================================================================== */
+
+.celsius .forecast-day .forecast-fahr, .fahrenheit .forecast-day .forecast-cel {
+  display: none;
+}

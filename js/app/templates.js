@@ -41,6 +41,26 @@ define([
     '</div>'
   ].join('');
 
+  Templates['settings'] = [
+    '<form role="form"',
+      '<div class="form-group">',
+        '<label for="welcomeMessageInput">Welcome Message</label>',
+        '<input type="text" class="form-control" id="welcomeMessageInput" placeholder="Enter Welcome Message" />',
+      '</div>',
+      '<div class="form-group">',
+        '<label for="backgroundColorInput">Background Color</label>',
+        '<input type="text" class="form-control" id="backgroundColorInput" placeholder="#3d3d3d" />',
+      '</div>',
+      '<div class="form-group">',
+        '<select id="tempType" class="form-control">',
+          '<option value="fahr" <% if(!celsius)print(\"selected\") %>>Fahrenheit</option>',
+          '<option value="cel" <% if(celsius)print(\"selected\") %>>Celsius</option>',
+        '</select>',
+      '</div>',
+      '<div id="btn-save" class="btn">Save</div>',
+    '</form>'
+  ].join('');
+
   for (var tmpl in Templates) {
     if (Templates.hasOwnProperty(tmpl)) {
       Templates[tmpl] = _.template(Templates[tmpl]);
