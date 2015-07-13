@@ -28,3 +28,18 @@ body {
 .celsius .forecast-day .forecast-fahr, .fahrenheit .forecast-day .forecast-cel {
   display: none;
 }
+
+/* ==========================================================================
+   Places List
+   ========================================================================== */
+
+
+.panel-body div {
+  display: none;
+}
+.detail .panel-body div {
+  display: inline-block !important;
+}
+.panel-body div:nth-child(1) {
+  display: inline-block;
+}

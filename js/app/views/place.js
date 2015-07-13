@@ -14,6 +14,11 @@ define([
 
     collection: new DaysCollection([]),
 
+    events: {
+      'click #btn-remove': 'removePlace',
+      'click #btn-expand': 'openDetail'
+    },
+
     initialize: function () {
       var html = this.template(this.model.toJSON());
       this.$el.html(html);
@@ -54,6 +59,14 @@ define([
       });
 
       this.$bodyEl.html(daysHTML.join(''));
+    },
+
+    removePlace: function (e) {
+      this.model.destroy();
+    },
+
+    openDetail: function (e) {
+      this.$('.panel').toggleClass('detail');
     }
 
   });
