@@ -7,13 +7,14 @@ define([
 
   var DaysCollection = Backbone.Collection.extend({
     model: DayModel,
+    url: 'http://api.wunderground.com/api/4551af85b076e442/forecast/q/IT/Magenta.json', 
     sync: function (method, model, options) {
-      options.timeout: 8000;
-      options.dataType: "jsonp";
+      options.timeout = 8000;
+      options.dataType = "jsonp";
       return Backbone.sync(method, model, options);
     },
     parse: function (response) {
-      return response.forecast.simpleforecase.forecastday;
+      return response.forecast.simpleforecast.forecastday;
     }
   });
 
