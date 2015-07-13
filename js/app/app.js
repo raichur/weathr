@@ -9,13 +9,19 @@ define([
 
   var initialize = function () {
 
-    var appModel = new AppModel();
+    var appModel = new AppModel({id:1});
 
     var appView = new AppView({model: appModel});
     $('body').append(appView.render().el);
 
     var router = new Router(appView);
     Backbone.history.start();
+
+    appModel.fetch();
+
+    window.debug = {
+      settings: appModel
+    }
 
     var daysCollection = new DaysCollection([], {
       url: 'http://api.wunderground.com/api/4551af85b076e442/forecast/q/IT/Magenta.json'

@@ -18,7 +18,7 @@ define([
         'lowCelsius': data.low.celsius,
         'highFahrenheit': data.high.fahrenheit,
         'lowFahrenheit': data.low.fahrenheit,
-        'icon_url': data.icon_url,
+        'icon_url': data.icon_url
       };
       return map;
     }
