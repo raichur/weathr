@@ -2,9 +2,7 @@ define([
   'app/views/app',
   'app/routers/router',
   'app/models/app',
-  'app/collections/days',
-  'app/collections/places'
-], function (AppView, Router, AppModel, DaysCollection, PlacesCollection) {
+], function (AppView, Router, AppModel) {
 
   'use strict';
 
@@ -19,27 +17,6 @@ define([
     Backbone.history.start();
 
     appModel.fetch();
-
-    var placesCollection = new PlacesCollection([]);
-    placesCollection.fetch();
-
-    window.debug = {
-      settings: appModel,
-      places: placesCollection
-    }
-
-    var daysCollection = new DaysCollection([], {
-      url: 'http://api.wunderground.com/api/4551af85b076e442/forecast/q/IT/Magenta.json'
-    });
-
-    daysCollection.fetch({
-      success: function (collection, response, options) {
-        console.log(collection, response);
-      },
-      error: function (collection, response, options) {
-        console.log('error');
-      }
-    });
 
   };
 
