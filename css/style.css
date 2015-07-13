@@ -2,9 +2,21 @@
    Navigation
    ========================================================================== */
 
+body {
+  font-family: "Helvetica Neue";
+  font-weight: 200;
+  font-size: 1.3em;
+  color: white;
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
 .active {
   font-weight: bold !important;
 }
 .navbar {
   color: white;
+  text-decoration: none;
 }
