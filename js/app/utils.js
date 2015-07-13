@@ -5,7 +5,8 @@ define([
   'use strict';
 
   var isNumber = function (n) {
-    return typeof n == 'number';
+    // Tests if n is not a number and is a finite number
+    return !isNaN(parseFloat(n)) && isFinite(n);
   }
 
   var celsiusToFahrenheit = function (cell) {
