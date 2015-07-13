@@ -3,8 +3,9 @@ define([
   'underscore',
   'backbone',
   'app/collections/places',
-  'app/views/place'
-], function ($, _, Backbone, PlacesCollection, PlaceView) {
+  'app/views/place',
+  'app/views/add_place'
+], function ($, _, Backbone, PlacesCollection, PlaceView, AddPlaceView) {
 
   'use strict';
 
@@ -13,10 +14,25 @@ define([
     html: [
       '<h3>Dashboard page</h3>',
       '<div id="places-list">Loading</div>',
-      '<div id="dash-buttons"></div>'
+      '<div id="dash-buttons">',
+        '<button id="btn-add-new" type="button" class="button">Add New</button>',
+      '</div>'
     ].join(''),
 
     views: [],
+
+    events: {
+      'click #btn-add-new': 'addNewPlace'
+    },
+
+    addNewPlace: function (e) {
+      var modal = new AddPlaceView({
+        title: 'Add a new place',
+        id: 'modal-add-new-place',
+        collection: this.collection
+      });
+      modal.show();
+    },
 
     initialize: function () {
       this.$el.html(this.html);
