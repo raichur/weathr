@@ -27,5 +27,4 @@ require([
   'use strict';
 
   App.initialize();
-  App.displayTime();
 });

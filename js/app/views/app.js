@@ -11,7 +11,7 @@ define([
 
     html: [
       '<div class="navbar">',
-        '<a class="navbar-brand" href="#">Weathr</a>'
+        '<a class="navbar-brand" href="#">Weathr</a>',
           '<ul>',
             '<li id="navbar-dash"><a href="#"">Dashboard</a></li>',
             '<li id="nav-about"><a href="#">About</a></li>',

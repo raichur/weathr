@@ -1,11 +1,12 @@
 define([
-  'jquery'
+  'app/views/app'
+], function (AppView) {
 
-], function ($) {
   'use strict';
 
   var initialize = function () {
-    $('body').append('<div id="' + id + '"></div>')
+      var appView = new AppView();
+      $('body').append(appView.el);
   };
 
   return {
