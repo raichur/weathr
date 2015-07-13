@@ -7,6 +7,7 @@ define([
   'use strict';
 
   var initialize = function () {
+
     var appModel = new AppModel();
 
     var appView = new AppView({model: appModel});
