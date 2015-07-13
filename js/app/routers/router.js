@@ -11,6 +11,7 @@ define([
     routes: {
       '': 'goToDash',
       'dash': 'goToDash',
+      'dash/:place': 'goToDash',
       'about': 'goToAbout'
     },
 
@@ -18,8 +19,13 @@ define([
       this.appView = view;
     },
 
-    goToDash: function () {
+    goToDash: function (place) {
       this.appView.setPage('dash');
+
+      if(place) {
+        alert("weather for " + place);
+      }
+
     },
 
     goToAbout: function () {
