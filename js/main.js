@@ -1,15 +1,3 @@
-require([
-  'qunit',
-  'tests/utilsTest'
-], function (qunit, utilsTest) {
-  'use strict';
-
-  utlisTest.run();
-  qunit.load();
-  qunit.start();
-});
-
-
 require.config({
 
   paths: {
