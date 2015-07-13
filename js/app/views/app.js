@@ -31,6 +31,7 @@ define([
     },
 
     initialize: function () {
+
       this.views['counter'] = new CounterView({
         id: 'counter-widget',
         className: 'counter-widget'
@@ -39,6 +40,7 @@ define([
       this.$el.append(this.html);
 
       this.$('#content').append(this.views['counter'].render().el);
+    
     },
 
     onNavDash: function (e) {

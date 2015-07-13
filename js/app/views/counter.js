@@ -15,11 +15,16 @@ define([
     },
 
     events: {
-      'click h3': 'addToCounter'
+      'click h3': 'addToCounter',
+      'click strong': 'removeView'
     },
 
     render: function () {
-      var html = '<h3>This view has been clicked ' + this.count + ' times</h3>';
+      var html = [
+        '<h3>This view has been clicked ' + this.count + ' times</h3>',
+        '<br/>',
+        '<strong>Remove</strong>'
+      ].join('');
       this.$el.html(html);
       return this;
     },
@@ -27,6 +32,10 @@ define([
     addToCounter: function () {
       this.count++;
       this.render();
+    },
+
+    removeView: function (e) {
+      this.remove();
     }
 
   });
