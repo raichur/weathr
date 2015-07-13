@@ -15,7 +15,7 @@ define([
     },
 
     events: {
-      'click span': 'addToCounter'
+      'click h3': 'addToCounter'
     },
 
     render: function () {

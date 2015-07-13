@@ -2,8 +2,8 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'views/counter'
-], function ($, _, Backbone, AppView) {
+  'app/views/counter'
+], function ($, _, Backbone, CounterView) {
 
   'use strict';
 
