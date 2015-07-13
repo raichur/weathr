@@ -18,6 +18,7 @@ define([
             '<li id="nav-dash"><a href="#dash">Dashboard</a></li>',
             '<li id="nav-about"><a href="#about">About</a></li>',
           '</ul>',
+          '<p class="navbar-text"></p>',
         '</div>',
         '<div id="content"></div>'
     ].join(''),
@@ -47,6 +48,12 @@ define([
       this.$('#content').append(this.views['about'].render().el);
       this.$('#content').append(this.views['dash'].render().el);
 
+    },
+
+    render: function () {
+      this.$el.css('background-color', this.model.get('backgroundColor'));
+      this.$('.navbar-text').html(this.model.get('welcomeMessage'));
+      return this;
     },
 
     setPage: function (page) {
