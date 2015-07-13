@@ -2,8 +2,9 @@ define([
   'app/views/app',
   'app/routers/router',
   'app/models/app',
-  'app/collections/days'
-], function (AppView, Router, AppModel, DaysCollection) {
+  'app/collections/days',
+  'app/collections/places'
+], function (AppView, Router, AppModel, DaysCollection, PlacesCollection) {
 
   'use strict';
 
@@ -19,8 +20,12 @@ define([
 
     appModel.fetch();
 
+    var placesCollection = new PlacesCollection([]);
+    placesCollection.fetch();
+
     window.debug = {
-      settings: appModel
+      settings: appModel,
+      places: placesCollection
     }
 
     var daysCollection = new DaysCollection([], {
