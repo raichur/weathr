@@ -14,7 +14,7 @@ define([
     html: [
       '<div class="navbar">',
         '<a class="navbar-brand" href="#">Weathr</a>',
-          '<ul>',
+          '<ul class="nav">',
             '<li id="nav-dash"><a href="#dash">Dashboard</a></li>',
             '<li id="nav-about"><a href="#about">About</a></li>',
           '</ul>',
@@ -50,7 +50,9 @@ define([
     },
 
     setPage: function (page) {
+      this.$('.nav li').removeClass('active');
       this.$('.page-view').hide();
+      this.$('#nav-' + page).addClass('active');
       this.$('#page-' + page).show();
     }
 
