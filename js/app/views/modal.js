@@ -18,8 +18,8 @@ define([
     id: 'modal-view',
 
     initialize: function () {
-      var title = this.options.title || '';
-      var appendTo = this.options.appendTo || 'body';
+      var title = this.title || '';
+      var appendTo = this.appendTo || 'body';
       var html = Templates['modal']({title: title});
       this.$el.html(html);
       this.$modalEl = this.$('.modal');
@@ -29,24 +29,8 @@ define([
     },
 
     render: function () {
-      this.$modelEl.modal({
-        show: false,
-        keyboard: false
-      });
+      
       return this;
-    },
-
-    show: function () {
-      var that = this;
-      this.$modalEl.modal('show');
-      this.$modalEl.on('hidden', function () {
-        that.onModalHidden();
-      });
-    },
-
-    onModalHidden: function (e) {
-      this.$modalEl.off('hidden');
-      this.remove();
     }
 
   });

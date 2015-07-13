@@ -31,7 +31,7 @@ define([
         id: 'modal-add-new-place',
         collection: this.collection
       });
-      modal.show();
+      modal.render();
     },
 
     initialize: function () {

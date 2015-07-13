@@ -39,7 +39,6 @@ define([
       };
 
       this.collection.create(place);
-      this.$modalEl.modal('hide');
     }
 
   });
