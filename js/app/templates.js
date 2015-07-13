@@ -17,6 +17,13 @@ define([
     '</div>'
   ].join('');
 
+  Templates['day'] = [
+    '<div>',
+      '<img src="<%= icon_url %>" alt="">',
+      '<br/><%= conditions %>',
+    '</div>'
+  ].join('');
+
   for (var tmpl in Templates) {
     if (Templates.hasOwnProperty(tmpl)) {
       Templates[tmpl] = _.template(Templates[tmpl]);
