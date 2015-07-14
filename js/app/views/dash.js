@@ -64,7 +64,7 @@ define([
         });
 
       } else {
-        this.$placesList.html('<div>Sorry, there are no places to display.</div>');
+        this.$placesList.html('<div><div class="panel"><h3>Sorry, there are no places to display.</h3></div></div>');
       }
       return this;
     },
