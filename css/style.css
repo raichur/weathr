@@ -85,6 +85,7 @@ a {
 	border: none;
 	background: rgba(0,0,0,.3);
 	float: right;
+	font-weight: 500;
 	margin-left: 10px;
 	outline: none;
 	&:hover {
@@ -95,6 +96,8 @@ a {
 	width: calc(80% - 40px);
 	margin: 20px auto;
 	text-align: right;
+	color: black;
+	font-weight: 500;
 }
 #btn-settings {
 	margin: 20px 10px;
