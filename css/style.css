@@ -99,6 +99,13 @@ a {
 	color: black;
 	font-weight: 500;
 }
+#btn-save, #btn-add {
+	font-weight: 600;
+	background: rgba(0,0,0,.3);
+	float: right;
+	padding: 5px 10px;
+	border-radius: 8px;
+}
 #btn-settings {
 	margin: 20px 10px;
 	text-align: left;

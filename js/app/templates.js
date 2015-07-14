@@ -44,7 +44,7 @@ define([
   ].join('');
 
   Templates['settings'] = [
-    '<form role="form"',
+    '<form role="form">',
       '<div class="form-group">',
         '<label for="welcomeMessageInput">Welcome Message</label>',
         '<input type="text" class="form-control" id="welcomeMessageInput" placeholder="Enter Welcome Message" />',
