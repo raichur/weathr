@@ -118,7 +118,6 @@ a {
 	float: right;
 	outline: none;
 	font-weight: 500;
-	margin-top: -30px;
 	border: none;
 }
 #btn-add-new, #btn-settings {
@@ -154,11 +153,12 @@ a {
 	margin-right: 10px;
 	border-radius: 10px;
 }
-.form-group {
-	width: 50%;
-	float: left;
+.modal .close {
+	margin-top: -30px;
 }
-
+.form-group {
+	margin-bottom: 10px;
+}
 /* Animation */
 .fade {
 	-webkit-animation-duration: 0.3s;
