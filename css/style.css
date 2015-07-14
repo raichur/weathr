@@ -110,6 +110,17 @@ a {
 	margin: 20px 10px;
 	text-align: left;
 }
+.close {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: rgba(0,0,0,.3);
+	float: right;
+	outline: none;
+	font-weight: 500;
+	margin-top: -30px;
+	border: none;
+}
 #btn-add-new, #btn-settings {
 	border-radius: 8px;
 	border: 0;
@@ -130,8 +141,9 @@ a {
 
 /* Modal */
 .modal {
+	padding: 30px;
 	position: fixed;
-	width: calc(100% - 20px);
+	width: calc(100% - 80px);
 	height: auto;
 	background: white;
 	color: #1d1d1d;
