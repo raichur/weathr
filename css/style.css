@@ -22,7 +22,8 @@ a {
   font-size: 3em;
   font-weight: 700;
   margin-top: 0;
-  padding-top: 30px;
+  padding-top: 50px;
+  margin-bottom: 20px;
 }
 
 
@@ -37,7 +38,6 @@ a {
 /* ==========================================================================
    Places List
    ========================================================================== */
-
 
 .panel-body div {
   display: none;
@@ -120,3 +120,62 @@ a {
 .forecast-day {
 	width: 25%;
 }
+
+/* Modal */
+.modal {
+	position: fixed;
+	width: calc(100% - 20px);
+	height: auto;
+	background: white;
+	color: #1d1d1d;
+	margin: auto;
+	z-index: 10;
+	top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-radius: 10px;
+}
+.form-group {
+	width: 50%;
+	float: left;
+}
+
+/* Animation */
+.fade {
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeInDown;
+	animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInDown {
+	  0% {
+		      opacity: 0;
+		          -webkit-transform: translate3d(0, -100%, 0);
+			      transform: translate3d(0, -100%, 0);
+			        }
+
+				  100% {
+					      opacity: 1;
+					          -webkit-transform: none;
+						      transform: none;
+						        }
+						}
+
+						@keyframes fadeInDown {
+							  0% {
+								      opacity: 0;
+								          -webkit-transform: translate3d(0, -100%, 0);
+									      transform: translate3d(0, -100%, 0);
+									        }
+
+										  100% {
+											      opacity: 1;
+											          -webkit-transform: none;
+												      transform: none;
+														}
+													}
+
+

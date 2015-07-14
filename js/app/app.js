@@ -12,6 +12,10 @@ define([
 
     var appView = new AppView({model: appModel});
     $('body').append(appView.render().el);
+    
+    setInterval(function() {
+	    $('.close').click(function() { $('.modal').fadeOut(400); });
+    }, 1000);
 
     var router = new Router(appView);
     Backbone.history.start();
