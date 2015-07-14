@@ -3,9 +3,9 @@
    ========================================================================== */
 
 body {
-  font-family: "Helvetica Neue";
+  font-family: "Avenir Next", Helvetica Neue, Arial, sans-serif;
   font-weight: 200;
-  font-size: 1.3em;
+  font-size: 1.4em;
   color: white;
 }
 
@@ -13,13 +13,18 @@ body {
    Navigation
    ========================================================================== */
 
-.active {
-  font-weight: bold !important;
-}
-.navbar {
+a {
   color: white;
   text-decoration: none;
 }
+.navbar-text {
+  text-align: center;
+  font-size: 3em;
+  font-weight: 700;
+  margin-top: 0;
+  padding-top: 30px;
+}
+
 
 /* ==========================================================================
    Forecast
@@ -37,9 +42,78 @@ body {
 .panel-body div {
   display: none;
 }
+.panel-body {
+	padding-bottom: 20px;
+}
 .detail .panel-body div {
   display: inline-block !important;
 }
 .panel-body div:nth-child(1) {
   display: inline-block;
+}
+#places-list {
+	width: 80%;
+	margin: auto;
+	color: #1d1d1d;
+	padding-bottom: 50px;
+}
+#places-list div:not(.forecast-day):not(.forecast-conditions) {
+	width: calc(100% - 40px);
+	background: #f0f0f0;
+	border-radius: 10px;
+	margin: 20px;
+}
+.forecast-conditions {
+	margin-bottom: 20px;
+	margin-top: -20px;
+	font-style: italic;
+}
+.forecast-day h3 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.forecast-cel, .forecast-fahr {
+	font-weight: 500;
+}
+.panel-heading {
+	padding-top: 30px;
+}
+#btn-expand, #btn-remove {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	border: none;
+	background: rgba(0,0,0,.3);
+	float: right;
+	margin-left: 10px;
+	outline: none;
+	&:hover {
+		background: rgba(0,0,0,.5);
+	}
+}
+#dash-buttons {
+	width: calc(80% - 40px);
+	margin: 20px auto;
+	text-align: right;
+}
+#btn-settings {
+	margin: 20px 10px;
+	text-align: left;
+}
+#btn-add-new, #btn-settings {
+	border-radius: 8px;
+	border: 0;
+	outline: 0;
+	padding: 5px 15px;
+}
+
+.panel-title {
+	clear: both;
+	font-size: 2.4em;
+	margin-top: 0;
+	display: inline;
+	margin-bottom: 10px;
+}
+.forecast-day {
+	width: 25%;
 }

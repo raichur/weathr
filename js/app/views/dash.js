@@ -12,11 +12,11 @@ define([
   var DashView = Backbone.View.extend ({
 
     html: [
-      '<h3>Dashboard page</h3>',
-      '<div id="places-list">Loading</div>',
       '<div id="dash-buttons">',
-        '<button id="btn-add-new" type="button" class="button">Add New</button>',
-      '</div>'
+      '<button id="btn-settings" type="button" class="button">Settings</button>',
+      '<button id="btn-add-new" type="button" class="button">Add New</button>',
+      '</div>',
+      '<div id="places-list">Loading</div>'
     ].join(''),
 
     views: [],

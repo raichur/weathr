@@ -8,9 +8,9 @@ define([
   var AppModel = Backbone.Model.extend({
     localStorage: new Backbone.LocalStorage("AppSettings"),
     defaults: {
-      'backgroundColor': '#3d3d3d',
+      'backgroundColor': '#1976D2',
       'celsius': true,
-      'welcomeMessage': 'Welcome to Weathr'
+      'welcomeMessage': 'Weathr'
     }
   });
 

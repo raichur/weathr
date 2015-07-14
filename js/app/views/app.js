@@ -13,15 +13,7 @@ define([
     id: 'app-view',
 
     html: [
-      '<div class="navbar">',
-        '<a class="navbar-brand" href="#">Weathr</a>',
-          '<ul class="nav">',
-            '<li id="nav-dash"><a href="#dash">Dashboard</a></li>',
-            '<li id="nav-about"><a href="#about">About</a></li>',
-          '</ul>',
-          '<p class="navbar-text"></p>',
-        '</div>',
-        '<button type="button" id="btn-settings">Settings</button>',
+        '<p class="navbar-text"></p>',
         '<div id="content"></div>'
     ].join(''),
 
