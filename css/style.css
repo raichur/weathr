@@ -59,13 +59,17 @@ button:hover {
    Places List
    ========================================================================== */
 
+.panel-body div {
+  display: inline-block;
+}
 .panel-body {
 	padding-bottom: 20px;
 }
 .detail .panel-body div {
+  display: none !important;
 }
 .panel-body div:nth-child(1) {
-  display: inline-block;
+  display: inline-block !important;
 }
 #places-list {
 	width: 80%;
