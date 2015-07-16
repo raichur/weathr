@@ -101,6 +101,9 @@ button:hover {
 	margin-bottom: 20px;
 	font-style: italic;
 }
+.forecast-day {
+	vertical-align: top;
+}
 .forecast-day h3 {
 	margin-top: 10px;
 	margin-bottom: 10px;
