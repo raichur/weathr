@@ -1,16 +1,18 @@
 /* ==========================================================================
    Navigation
    ========================================================================== */
-
 body {
   font-family: "Avenir Next", Helvetica Neue, Arial, sans-serif;
   font-weight: 200;
   font-size: 1.4em;
   color: white;
+  height: 100%;
 }
-
+#app-view {
+	min-height: 100%;
+}
 /* ==========================================================================
-   Navigation
+  Links 
    ========================================================================== */
 
 a {
@@ -25,7 +27,25 @@ a {
   padding-top: 50px;
   margin-bottom: 20px;
 }
-
+input[type="text"] {
+	font-weight: bold;
+	padding: 5px 10px;
+	border-radius: 8px;
+	margin: 10px;
+	outline: 0;
+	border: 1px solid rgba(0,0,0,.4);
+}
+#btn-add, #btn-save, button {
+	transition: .3s all ease;
+}
+#btn-add:hover, #btn-save:hover, button:hover {
+	color: white;
+	background: #1d1d1d !important;
+	cursor: pointer;
+}
+button:hover {
+	cursor: pointer;
+}
 
 /* ==========================================================================
    Forecast
