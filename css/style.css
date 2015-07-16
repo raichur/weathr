@@ -31,7 +31,7 @@ input[type="text"] {
 	font-weight: bold;
 	padding: 5px 10px;
 	border-radius: 8px;
-	margin: 10px;
+	margin-top: 10px;
 	outline: 0;
 	border: 1px solid rgba(0,0,0,.4);
 }
@@ -162,15 +162,16 @@ button:hover {
 .modal {
 	padding: 30px;
 	position: fixed;
-	width: calc(100% - 80px);
 	height: auto;
 	background: white;
 	color: #1d1d1d;
 	margin: auto;
 	z-index: 10;
 	top: 10px;
-	margin-left: 10px;
-	margin-right: 10px;
+	width: 300px;
+	left: 50%;
+	margin-left: -180px;
+	display: block;
 	border-radius: 10px;
 }
 .modal .close {
